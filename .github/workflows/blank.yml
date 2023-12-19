@@ -34,3 +34,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo "repository variable : $MYVAR"
+        env:
+          MYVAR: ${{ vars.MYVAR }}          
