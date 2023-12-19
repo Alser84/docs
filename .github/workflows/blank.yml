@@ -50,10 +50,10 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
+        if: inputs.environment == 'test'    
         run: |
-          if inputs.environment == 'test'; then
             echo "repository variable : $MYVAR"
-          fi
+            echo "TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST"
           
         env:
           MYVAR: ${{ vars.MYVAR }}          
